@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>attiny85</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>ATtiny_OLED</AssemblyName>
+    <Name>ATtiny_OLED</Name>
+    <RootNamespace>ATtiny_OLED</RootNamespace>
+    <ArduinoIdeDir>C:\Program Files (x86)\Arduino</ArduinoIdeDir>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.28.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <avrtoolserialnumber>J41800028409</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x1E930B</avrdeviceexpectedsignature>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolOptions>
+        <InterfaceProperties>
+        </InterfaceProperties>
+        <InterfaceName>
+        </InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber>
+      </ToolNumber>
+      <ToolName>Simulator</ToolName>
+    </com_atmel_avrdbg_tool_simulator>
+    <avrtoolinterface>debugWIRE</avrtoolinterface>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+        </InterfaceProperties>
+        <InterfaceName>debugWIRE</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800028409</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+        <avrgcc.common.Device>-mmcu=attiny85 -B "%24(PackRepoDir)\atmel\ATtiny_DFP\1.0.71\gcc\dev\attiny85"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+            <Value>NDEBUG</Value>
+            <Value>F_CPU=8000000L</Value>
+            <Value>ARDUINO=166</Value>
+            <Value>ARDUINO_AVR_GEMMA</Value>
+            <Value>ARDUINO_ARCH_AVR</Value>
+            <Value>USB_VID=0x2341</Value>
+            <Value>USB_PID=0x0c9f</Value>
+            <Value>USB_MANUFACTURER=Unknown</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../include\arduino</Value>
+            <Value>../include\eightanaloginputs</Value>
+            <Value>../include\ethernet</Value>
+            <Value>../include\gemma</Value>
+            <Value>../include\leonardo</Value>
+            <Value>../include\mega</Value>
+            <Value>../include\micro</Value>
+            <Value>../include\robot_control</Value>
+            <Value>../include\robot_motor</Value>
+            <Value>../include\standard</Value>
+            <Value>../include\yun</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.OtherFlags>-fno-threadsafe-statics -fno-exceptions</avrgcc.compiler.optimization.OtherFlags>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.compiler.warnings.InhibitAllWarnings>True</avrgcc.compiler.warnings.InhibitAllWarnings>
+        <avrgcc.compiler.miscellaneous.OtherFlags />
+        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+            <Value>NDEBUG</Value>
+            <Value>F_CPU=8000000L</Value>
+            <Value>ARDUINO=166</Value>
+            <Value>ARDUINO_AVR_GEMMA</Value>
+            <Value>ARDUINO_ARCH_AVR</Value>
+            <Value>USB_VID=0x2341</Value>
+            <Value>USB_PID=0x0c9f</Value>
+            <Value>USB_MANUFACTURER=Unknown</Value>
+          </ListValues>
+        </avrgcccpp.compiler.symbols.DefSymbols>
+        <avrgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../include\arduino</Value>
+            <Value>../include\eightanaloginputs</Value>
+            <Value>../include\ethernet</Value>
+            <Value>../include\gemma</Value>
+            <Value>../include\leonardo</Value>
+            <Value>../include\mega</Value>
+            <Value>../include\micro</Value>
+            <Value>../include\robot_control</Value>
+            <Value>../include\robot_motor</Value>
+            <Value>../include\standard</Value>
+            <Value>../include\yun</Value>
+          </ListValues>
+        </avrgcccpp.compiler.directories.IncludePaths>
+        <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
+        <avrgcccpp.compiler.optimization.OtherFlags>-fno-threadsafe-statics -fno-exceptions</avrgcccpp.compiler.optimization.OtherFlags>
+        <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+        <avrgcccpp.compiler.warnings.InhibitAllWarnings>True</avrgcccpp.compiler.warnings.InhibitAllWarnings>
+        <avrgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.Libraries>
+        <avrgcccpp.linker.miscellaneous.LinkerFlags>-Os</avrgcccpp.linker.miscellaneous.LinkerFlags>
+      </AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+        <avrgcc.common.Device>-mmcu=attiny85 -B "%24(PackRepoDir)\atmel\ATtiny_DFP\1.0.71\gcc\dev\attiny85"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>DEBUG</Value>
+            <Value>F_CPU=8000000L</Value>
+            <Value>ARDUINO=166</Value>
+            <Value>ARDUINO_AVR_GEMMA</Value>
+            <Value>ARDUINO_ARCH_AVR</Value>
+            <Value>USB_VID=0x2341</Value>
+            <Value>USB_PID=0x0c9f</Value>
+            <Value>USB_MANUFACTURER=Unknown</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../include\arduino</Value>
+            <Value>../include\eightanaloginputs</Value>
+            <Value>../include\ethernet</Value>
+            <Value>../include\gemma</Value>
+            <Value>../include\leonardo</Value>
+            <Value>../include\mega</Value>
+            <Value>../include\micro</Value>
+            <Value>../include\robot_control</Value>
+            <Value>../include\robot_motor</Value>
+            <Value>../include\standard</Value>
+            <Value>../include\yun</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.OtherFlags>-fno-threadsafe-statics -fno-exceptions</avrgcc.compiler.optimization.OtherFlags>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.compiler.warnings.InhibitAllWarnings>True</avrgcc.compiler.warnings.InhibitAllWarnings>
+        <avrgcc.compiler.miscellaneous.OtherFlags />
+        <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>DEBUG</Value>
+            <Value>F_CPU=8000000L</Value>
+            <Value>ARDUINO=166</Value>
+            <Value>ARDUINO_AVR_GEMMA</Value>
+            <Value>ARDUINO_ARCH_AVR</Value>
+            <Value>USB_VID=0x2341</Value>
+            <Value>USB_PID=0x0c9f</Value>
+            <Value>USB_MANUFACTURER=Unknown</Value>
+          </ListValues>
+        </avrgcccpp.compiler.symbols.DefSymbols>
+        <avrgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../include\arduino</Value>
+            <Value>../include\eightanaloginputs</Value>
+            <Value>../include\ethernet</Value>
+            <Value>../include\gemma</Value>
+            <Value>../include\leonardo</Value>
+            <Value>../include\mega</Value>
+            <Value>../include\micro</Value>
+            <Value>../include\robot_control</Value>
+            <Value>../include\robot_motor</Value>
+            <Value>../include\standard</Value>
+            <Value>../include\yun</Value>
+          </ListValues>
+        </avrgcccpp.compiler.directories.IncludePaths>
+        <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
+        <avrgcccpp.compiler.optimization.OtherFlags>-fno-threadsafe-statics -fno-exceptions</avrgcccpp.compiler.optimization.OtherFlags>
+        <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+        <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+        <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+        <avrgcccpp.compiler.warnings.InhibitAllWarnings>True</avrgcccpp.compiler.warnings.InhibitAllWarnings>
+        <avrgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcccpp.linker.libraries.Libraries>
+        <avrgcccpp.linker.miscellaneous.LinkerFlags>-Os</avrgcccpp.linker.miscellaneous.LinkerFlags>
+        <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+      </AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Game.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Game.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\Arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\binary.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\Client.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\HardwareSerial.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\HardwareSerial_private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\IPAddress.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\new.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\pins_arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\PluggableUSB.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\Print.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\Printable.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\Server.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\Stream.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\Udp.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\USBAPI.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\USBCore.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\USBDesc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\WCharacter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\wiring_private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\arduino\WString.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\eightanaloginputs\pins_arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\ethernet\pins_arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\leonardo\pins_arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\mega\pins_arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\micro\pins_arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\robot_control\pins_arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\robot_motor\pins_arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\standard\pins_arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\yun\pins_arduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Oled.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Oled.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Sketch.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\abi.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\CDC.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\HardwareSerial.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\HardwareSerial0.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\HardwareSerial1.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\HardwareSerial2.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\HardwareSerial3.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\hooks.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\IPAddress.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\main.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\new.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\PluggableUSB.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Print.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Stream.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Tone.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\USBCore.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\WInterrupts.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\wiring.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\wiring_analog.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\wiring_digital.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\wiring_pulse.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\wiring_shift.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\WMath.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\WString.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SSD1306_minimal.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SSD1306_minimal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="TinyWireM.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="TinyWireM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="USI_TWI_Master.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="USI_TWI_Master.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="include\" />
+    <Folder Include="include\arduino\" />
+    <Folder Include="include\eightanaloginputs\" />
+    <Folder Include="include\ethernet\" />
+    <Folder Include="include\leonardo\" />
+    <Folder Include="include\mega\" />
+    <Folder Include="include\micro\" />
+    <Folder Include="include\robot_control\" />
+    <Folder Include="include\robot_motor\" />
+    <Folder Include="include\standard\" />
+    <Folder Include="include\yun\" />
+    <Folder Include="src\" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
