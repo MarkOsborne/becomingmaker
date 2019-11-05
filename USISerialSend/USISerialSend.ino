@@ -153,12 +153,8 @@ void loop() {
     char message[] = "USI Serial\r\n";
     uint8_t len = sizeof(message)-1;
     for (uint8_t i = 0; i<len; i++)
-    {
-        while (!usiserial_send_available())
-        {
-            // Wait for last send to complete
-        }
         usiserial_send_byte(message[i]);
-    }
+    while (!usiserial_send_available()) {}    // Wait for last send to complete
+
     delay(1000);
 }
